@@ -1,0 +1,52 @@
+shell:
+  program: /usr/bin/zsh
+    #  args:
+    #    - -l
+    #    - -c
+    #    - "source ~/.zshrc; tmux attach 2> /dev/null || tmux"
+
+window:
+  padding:
+      x: 0
+      y: 0
+
+font:
+  normal:
+    family: "Fira Code"
+  bold:
+    family: "Fira Code"
+  italic:
+    family: "Fira Code"
+
+draw_bold_text_with_bright_colors: false    
+
+cursor:
+  style: Beam
+
+background_opacity: 0.8
+
+colors:
+  primary:
+    foreground: '#d0cfcc'
+    background: '#1e1e1e'
+    bright_foreground: '#ffffff'
+
+  normal:
+    black:   '#1e1e1e'
+    red:     '#c01c28'
+    green:   '#26a269'
+    yellow:  '#a2734c'
+    blue:    '#12488b'
+    magenta: '#a347ba'
+    cyan:    '#2aa1b3'
+    white:   '#d0cfcc'
+
+  bright:
+    black:   '#5e5c64'
+    red:     '#f66151'
+    green:   '#33d17a'
+    yellow:  '#e9ad0c'
+    blue:    '#2a7bde'
+    magenta: '#c061cb'
+    cyan:    '#33c7de'
+    white:   '#ffffff'

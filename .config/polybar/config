@@ -1,0 +1,284 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   It's a modified version of https://github.com/kiddae/dotfiles/blob/main/doublechic/.config/polybar/config 
+;
+;==========================================================
+
+[colors]
+background = #1e1e1e
+foreground = #d0cfcc
+red = #c01c28
+green = #26a269
+yellow = #a2734c
+blue = #12488b
+magenta = #a347ba
+cyan = #2aa1b3
+white = #d0cfcc
+brightBlack = #5e5c64
+brightRed = #f66151
+brightGreen = #33d17a
+brightYellow = #e9ad0c
+brightBlue = #2a7bde
+brightMagenta = #c061cb
+brightCyan = #33c7de
+brightWhite = #ffffff
+
+
+;  _
+; | |__   __ _ _ __ ___
+; | '_ \ / _` | '__/ __|
+; | |_) | (_| | |  \__ \
+; |_.__/ \__,_|_|  |___/
+
+[bar/base]
+enable-ipc=true
+
+height = 35
+;width = 100%:-17
+
+;offset-y = 15
+;offset-x = 0
+offset-y = 0
+
+padding = 2
+module-margin = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = false
+
+;border-color = ${colors.background}
+border-top-size = 6
+border-left-size = 8
+border-right-size = 8
+radius = 7
+#border-top-size = 10
+
+line-size = 0
+line-color = ${colors.red}
+
+font-0=Cantarell:style=Medium:size=12;4
+font-1=Cantarell:style=Bold:size=12;4
+;font-0=SF Pro Display:style=Regular:size=14;4
+;font-1=SF Pro Display:style=Bold:size=14;4
+font-2=Material Icons:size=12;5
+#font-4=font\-logos:size=9;4
+font-3=FontAwesome5Free:size=11;2
+font-4=FontAwesome5Brands:size=11;2
+font-5=IPAGothic:size=11;3
+font-6="font\-logos:size=9;4"
+
+wm-restack = i3
+override-redirect = false
+
+tray-position = center
+tray-detached = false
+tray-padding = 0
+
+modules-left = launcher i3 xwindow
+modules-right = playerctl pulseaudio date powermenu
+
+;                      _       _
+;  _ __ ___   ___   __| |_   _| | ___  ___
+; | '_ ` _ \ / _ \ / _` | | | | |/ _ \/ __|
+; | | | | | | (_) | (_| | |_| | |  __/\__ \
+; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
+
+[module/launcher]
+type=custom/text
+content = 
+content-margin = 1
+click-left=rofi -show run -theme ~/.config/rofi/theme.rafi
+content-font = 1
+;The script above is to be found here : https://github.com/kiddae/scripts
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:35:...%
+label-overline = ${colors.foreground}
+label-empty = Nothing
+label-empty-foreground = ${colors.brightRed}
+format-margin = 1
+
+[module/i3]
+type = internal/i3
+
+#ws-icon-0 = 1;
+#ws-icon-1 = 2;
+#ws-icon-2 = 3;
+#ws-icon-9 = 10;
+#ws-icon-default = 
+
+
+format = <label-state>
+format-margin = 1
+index-sort = true
+
+enable-click = true
+reverse-scroll = false
+enable-scroll = true
+
+label-focused = %icon% %name%
+;label-focused = 
+label-focused-font = 2
+label-focused-overline = ${colors.foreground}
+label-focused-padding = 1
+
+label-empty = %icon% %name%
+;label-empty = 
+label-empty-padding = 1
+label-empty-foreground = ${colors.blue}
+
+label-occupied = %icon% %name%
+;label-occupied = 
+label-occupied-foreground = ${colors.brightYellow}
+label-occupied-padding = 1
+
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = %{A1:urxvt -e nmtui & disown:} <label-connected>%{A}
+format-connected-overline = ${colors.foreground}
+format-connected-margin = 1
+label-connected = %essid%
+
+format-disconnected = %{A1:urxvt -e nmtui & disown:}<label-disconnected>%{A}
+format-disconnected-margin = 1
+format-disconnected-overline = ${colors.color8}
+label-disconnected = %ifname% disconnected
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-color1 = ${colors.color1}
+
+[module/date]
+type = internal/date
+interval = 10
+format-margin = 1
+format-overline = ${colors.blue}
+
+time = "%H:%M"
+date = "%d %b"
+
+label = %{A1:urxvt -e calcurse & disown:}%time% | %date%%{A}
+label-padding = 0
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-padding = 1
+format-volume-margin = 1
+format-volume-overline = ${colors.foreground}
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage:3:3%%
+use-ui-max = false
+interval = 5
+
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+
+
+label-muted = " muted"
+format-muted-foreground = ${colors.brightRed}
+format-muted-overline = ${colors.foreground}
+format-muted-margin = 1
+format-muted-padding = 1
+
+[module/mpd]
+type = internal/mpd
+label-song-maxlen = 48
+format-paused-overline = ${colors.color8}
+format-playing-overline = ${colors.foreground}
+label-song = %artist%: %title%
+format-online = "%{A1:urxvt -e ncmpcpp & disown:}    <label-song>%{A}"
+
+icon-play = 
+icon-pause = 
+icon-prev = 
+icon-next = 
+
+[module/mpd-controls]
+type = internal/mpd
+format-online = "<icon-prev> <toggle> <icon-next>"
+format-playing-overline = ${colors.foreground}
+format-paused-overline = ${colors.color8}
+
+icon-play = 
+icon-pause = 
+icon-prev = 
+icon-next = 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format =  <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-color1 = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+[module/powermenu]
+type = custom/text
+content-padding = 1
+content = 
+click-left = bash ~/.config/rofi/power-menu.sh
+
+[module/spotify]
+type = custom/script
+format-margin = 1
+format =    <label>
+exec = playerctl metadata --format '{{artist}}: {{title}}'
+tail = true
+interval = 1
+click-left = "playerctl play-pause"
+
+[module/playerctl]
+type = custom/script
+format-margin = 1
+;exec = playerctl status       52
+exec = playerctl metadata --format "Now {{ lc(status) }} \"{{ trunc(title, 20) }}\""
+format-prefix = 
+exec-if = [[ "$(playerctl -l)" != "No players found" && "$(playerctl status)" != "Stopped" ]] && echo "0"
+tail = false
+interval = 1
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
