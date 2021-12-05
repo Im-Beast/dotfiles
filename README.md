@@ -38,9 +38,9 @@ That's the files I used to customize my i3 WM.
         </li>
     </ul>
     <h3>🗨️ Dunst notifications</h3>
-    <center>
+    <div align="center">
         <img src="./docs/dunst-notifications.png" alt="dunst notification">
-    </center>
+    </div>
 </details>
 
 ## 📝 Licensing
