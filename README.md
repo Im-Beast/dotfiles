@@ -24,9 +24,11 @@ That's the files I used to customize my i3 WM.
 
 - `.config/i3/config` – auto run commands at the near end of the file
 
+## ✨ Screenshots
+
 <details>
-    <summary>Screenshots</summary>
-    <h3>🗔 Desktop</h3>
+    <summary>Show all</summary>
+    <h3>🖼️ Desktop</h3>
     <img src="./docs/desktop.png" alt="desktop">
     <h3>📟 Rofi</h3>
     <ul>
