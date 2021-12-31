@@ -41,6 +41,8 @@ bindsym $mod+q exec rofi -show run -theme ~/.config/rofi/theme.rafi
 bindsym $mod+Tab exec rofi -show window -theme ~/.config/rofi/theme.rafi
 # Start rofi – power menu
 bindsym $mod+Shift+e exec bash ~/.config/rofi/power-menu.sh
+# Start rofi – password manager
+bindsym $mod+Shift+f exec bash ~/.config/rofi/rofi-pass.sh
 
 # change focus
 bindsym $mod+j focus left
