@@ -26,4 +26,5 @@ cp ~/.zshrc ./.zshrc
 cp -r ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ./.oh-my-zsh/custom/plugins/zsh-autosuggestions;
 cp -r ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ./.oh-my-zsh/custom/plugins/zsh-syntax-highlighting;
 cp ~/.oh-my-zsh/themes/oxide.zsh-theme ./.oh-my-zsh/themes/oxide.zsh-theme;
-
+# copy wallpaper to docs
+cp ~/Pictures/wallpaper.png ./docs/wallpaper.png

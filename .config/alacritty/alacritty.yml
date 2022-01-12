@@ -23,30 +23,30 @@ draw_bold_text_with_bright_colors: false
 cursor:
   style: Beam
 
-background_opacity: 0.8
+background_opacity: 1
 
 colors:
+  # Default colors
   primary:
-    foreground: '#d0cfcc'
-    background: '#1e1e1e'
-    bright_foreground: '#ffffff'
-
+    background: '#282c34'
+    foreground: '#bbc2cf'
+    # Normal colors
   normal:
-    black:   '#1e1e1e'
-    red:     '#c01c28'
-    green:   '#26a269'
-    yellow:  '#a2734c'
-    blue:    '#12488b'
-    magenta: '#a347ba'
-    cyan:    '#2aa1b3'
-    white:   '#d0cfcc'
+    black:   '#282c34'
+    red:     '#d54e53'
+    green:   '#98be65'
+    yellow:  '#ecbe7b'
+    blue:    '#51afef'
+    magenta: '#c678dd'
+    cyan:    '#46d9ff'
+    white:   '#bbc2cf'
 
   bright:
-    black:   '#5e5c64'
-    red:     '#f66151'
-    green:   '#33d17a'
-    yellow:  '#e9ad0c'
-    blue:    '#2a7bde'
-    magenta: '#c061cb'
-    cyan:    '#33c7de'
-    white:   '#ffffff'
+    black:   '#666666'
+    red:     '#ff6c6b'
+    green:   '#b9ca4a'
+    yellow:  '#e7c547'
+    blue:    '#7aa6da'
+    magenta: '#c397d8'
+    cyan:    '#70c0b1'
+    white:   '#eaeaea'

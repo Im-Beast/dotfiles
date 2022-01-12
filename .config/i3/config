@@ -168,8 +168,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # PrintScreens
-bindsym Print exec "maim -u -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
-bindsym $mod+shift+s exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
+bindsym Print exec "maim -u -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshots/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+bindsym $mod+shift+s exec "flameshot gui"
+# bindsym $mod+shift+s exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
 
 # Launch polybar
 exec_always bash ~/.config/polybar/launch.sh
@@ -191,14 +192,14 @@ exec_always cpupower-gui co
 
 # Set colors of i3 tiles
 # class        border  backgr. text    indicator child_border
-client.focused #1e1e1e #5e5c64 #ffffff #2e9ef4   #5e5c64
-client.urgent  #1e1e1e #1e1e1e #ffffff #f66151   #5c1c28
+client.focused #282c34 #eaeaea #eaeaea #c678dd   #bbc2cf
+client.urgent  #282c34 #282c34 #eaeaea #d54e53   #ff6c6b
 
 # Set gaps and borders
 for_window [class="^.*"] border pixel 5
 gaps inner 16
 gaps outer -8
-border_radius 7
+# border_radius 7
 
 # Disable focus following mouse
 focus_follows_mouse no

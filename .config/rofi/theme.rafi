@@ -5,7 +5,7 @@
     spacing:    0px;
 
     background-color: transparent;
-    text-color: #d0cfcc;
+    text-color: #eaeaea;
 }
 
 window {
@@ -13,7 +13,7 @@ window {
     location:           north;
     padding: 3px;
     width:              calc(100% - 16px);
-    background-color:   #1e1e1e;
+    background-color:   #282c34;
     border-radius: 0 0 7px 7px;
     children:           [ mainbox, message ];
 }
@@ -35,7 +35,7 @@ prompt, entry, element-text, element-icon {
 }
 
 prompt {
-    text-color: #d0cfcc;
+    text-color: #eaeaea;
 }
 
 listview {
@@ -48,27 +48,27 @@ element {
 }
 
 element normal urgent {
-    text-color: #d0cfcc;
+    text-color: #bbc2cf;
 }
 
 element normal active {
-    text-color: #2a7bde;
+    text-color: #c397d8;
 }
 
 element selected {
-    text-color: #d0cfcc;
+    text-color: #282c34;
 }
 
 element selected normal {
-    background-color:   #5e5c64;
+    background-color:   #c678dd;
 }
 
 element selected urgent {
-    background-color:   #e9ad0c;
+    background-color:   #d54e5c;
 }
 
 element selected active {
-    background-color:   #2a7bde;
+    background-color:   #c678dd;
 }
 
 element-icon {
