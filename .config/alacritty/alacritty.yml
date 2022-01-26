@@ -7,8 +7,9 @@ shell:
 
 window:
   padding:
-      x: 0
-      y: 0
+      x: 5
+      y: 5
+  opacity: 0.8
 
 font:
   normal:
@@ -22,8 +23,6 @@ draw_bold_text_with_bright_colors: false
 
 cursor:
   style: Beam
-
-background_opacity: 1
 
 colors:
   # Default colors

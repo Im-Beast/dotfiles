@@ -8,7 +8,7 @@ export ZSH="/home/mateusz/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="oxide"
+ZSH_THEME="half-life"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,10 +105,20 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Update mirrors to best rated ones
-alias updatemirrors="sudo rate-mirrors --allow-root --save=/etc/pacman.d/mirrorlist arch --max-delay=21600"
+alias updatemirrors="doas rate-mirrors --allow-root --save=/etc/pacman.d/mirrorlist arch --max-delay=21600"
 # Remove orphaned packages
 alias removeorphans="paru -Qtdq | paru -Rns -"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export GPG_TTY=$(tty)
 export PATH="$HOME/.deno/bin:$PATH"
+
+export PNPM_HOME="/home/mateusz/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# Colored LS
+source /usr/share/LS_COLORS/dircolors.sh
+
+# ANDROID STUDIO
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools

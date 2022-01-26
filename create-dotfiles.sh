@@ -18,13 +18,11 @@ cp -r ~/.config/polybar ./.config;
 cp -r ~/.config/rofi ./.config;
 # compositor
 cp -r ~/.config/picom.conf ./.config;
-# text/code editor
-cp -r ~/.config/nvim ./.config;
 # zsh config
 cp ~/.zshrc ./.zshrc
 # oh-my-zsh plugins and themes
 cp -r ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ./.oh-my-zsh/custom/plugins/zsh-autosuggestions;
 cp -r ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ./.oh-my-zsh/custom/plugins/zsh-syntax-highlighting;
-cp ~/.oh-my-zsh/themes/oxide.zsh-theme ./.oh-my-zsh/themes/oxide.zsh-theme;
+cp ~/.oh-my-zsh/themes/oxide.zsh-theme ./.oh-my-zsh/themes/half-life.zsh-theme;
 # copy wallpaper to docs
 cp ~/Pictures/wallpaper.png ./docs/wallpaper.png

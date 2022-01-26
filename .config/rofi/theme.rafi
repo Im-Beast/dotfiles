@@ -52,7 +52,7 @@ element normal urgent {
 }
 
 element normal active {
-    text-color: #c397d8;
+    text-color: #ff6c6b;
 }
 
 element selected {
@@ -60,7 +60,7 @@ element selected {
 }
 
 element selected normal {
-    background-color:   #c678dd;
+    background-color:   #d54e53;
 }
 
 element selected urgent {
@@ -68,7 +68,7 @@ element selected urgent {
 }
 
 element selected active {
-    background-color:   #c678dd;
+    background-color:   #d54e53;
 }
 
 element-icon {

@@ -179,20 +179,20 @@ exec_always bash ~/.config/polybar/launch.sh
 exec_always xwallpaper --zoom ~/Pictures/wallpaper.png
 
 # Launch picom (compositor)
-exec_always picom --vsync --experimental-backends --backend glx --blur-method gaussian --blur-size 7 --blur-deviation 5 --config ~/.config/picom.conf
+exec_always (killall picom; picom --vsync --experimental-backends --backend glx --blur-method gaussian --blur-size 7 --blur-deviation 5 --config ~/.config/picom.conf)
 
 # Set keyboard mapping to polish
 exec_always setxkbmap pl
 
 # Launch dunst – notification daemon
-exec_always dunst -conf ~/.config/dunst/dunst.conf
+exec_always (killall dunst; dunst -conf ~/.config/dunst/dunst.conf)
 
 # Load cpupower-gui config
 exec_always cpupower-gui co
 
 # Set colors of i3 tiles
 # class        border  backgr. text    indicator child_border
-client.focused #282c34 #eaeaea #eaeaea #c678dd   #bbc2cf
+client.focused #282c34 #eaeaea #eaeaea #ff9c9b   #d54e53
 client.urgent  #282c34 #282c34 #eaeaea #d54e53   #ff6c6b
 
 # Set gaps and borders

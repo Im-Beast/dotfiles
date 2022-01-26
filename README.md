@@ -6,12 +6,10 @@ That's the files I used to customize my i3 WM.
 
 - [i3-gaps-rounded](https://github.com/jbenden/i3-gaps-rounded) – window manager
 - [polybar](https://github.com/polybar/polybar) – status bar
-- [wallpaper](./docs/wallpaper.png) – Shiro from _No Game No Life_ found
-  [here](https://wallpapercave.com/w/wp3244946) but modified to be dark-mode
-  friendly
-- [neovim](https://github.com/neovim/neovim) +
-  [CodeArt](https://github.com/artart222/CodeArt) or
-  [vscodium](https://github.com/VSCodium/vscodium/) – text & code editor
+- [wallpaper](./docs/wallpaper.png) – Akame from _Akame Ga Kill!_ found
+  [here](https://wall.alphacoders.com/big.php?i=931391) but modified to be
+  dark-mode friendly
+- [vscodium](https://github.com/VSCodium/vscodium/) – text & code editor
 - [dunst](https://github.com/dunst-project/dunst) – notification daemon
 - [alacritty](https://github.com/alacritty/alacritty) – terminal emulator
 - [rofi](https://github.com/joni22u/rofi) – app launcher, alt+tab window,
